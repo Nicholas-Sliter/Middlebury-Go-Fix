@@ -1,0 +1,34 @@
+<!--
+	
+	File: global.html
+	Abstract: Global Page HTML file.
+	Version: 1.0
+
+	Copyright (C) 2012 Nate Beatty. All Rights Reserved.
+
+-->
+
+<!DOCTYPE html>
+<script>
+
+// By registering the listener at the SafariApplication level, ensure that the beforeSearchHandler
+// will be invoked before a search is done in any tab in any window.
+safari.application.addEventListener("beforeSearch", beforeSearchHandler, true);
+
+function beforeSearchHandler(event) 
+{
+
+	if (event.query.substr(0, 3).toLowerCase() == "go/") {
+
+		// Prevent the the default action for this event, which is to execute the search.
+        event.preventDefault();
+        
+        // In the tab where the search was going to be executed, which is the target of the event,
+        // navigate to the desired site and do the search there.
+        event.target.url = "http://go.middlebury.edu/" + escape(event.query.substring(3));
+
+    	return;
+	}
+}
+
+</script>
