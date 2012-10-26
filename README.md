@@ -10,7 +10,7 @@ For years, Middlebury College Library and Information Services has implemented a
 
 Many modern browsers have recently switched to "omnibars" which recognize *go/* URI's as searches rather than requests to the Middlebury system. Furthermore, even when using an old browser, *go/* links are only handled by the Middlebury servers. Thus, the *go/* system is only accessible from outside of the Middlebury local network by using the URL "go.middlebury.edu/". The plugins contained within this repository attempt to remedy both of these by redirecting *go/* requests to the appropriate URI.
 
-More information can be found on the [Midd Farmstand](http://middfarmstand.heroku.com) website.
+More information can be found on the [Midd Farmstand](https://github.com/tnbeatty/Middlebury-Go-Fix/blob/master/Middlebury%20Go%20Fix.safariextz?raw=true) website.
 
 For Safari
 ---
