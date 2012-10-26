@@ -15,3 +15,6 @@ More information can be found on the [Midd Farmstand](http://middfarmstand.herok
 For Safari
 ---
 
+1. Download the safari extension [here](https://github.com/tnbeatty/Middlebury-Go-Fix/blob/master/Middlebury%20Go%20Fix.safariextz).
+2. Open your downloads folder and double-click on the "Middlebury Go Fix.safariextz" file.
+3. Click "Install" in the dialog box and use *go/* on and off campus to your heart's content.
