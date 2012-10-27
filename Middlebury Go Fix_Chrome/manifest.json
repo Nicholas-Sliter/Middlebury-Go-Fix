@@ -1,0 +1,13 @@
+{
+  "name": "Middlebury Go Fix",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "A fix to use the Middlebury 'go/' system from the Chrome omni bar.",
+  "background": { "scripts": ["background.js"] },
+  "page_action": {
+    "default_title": "Middlebury 'go/'"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
