@@ -2,7 +2,7 @@
 /*
  *	File: background.js
  *	Abstract: Global JavaScript file to capture URL and control redirect.
- *	Version: 1.0
+ *	Version: 1.1.0
  *
  *	Copyright (C) 2012 Nate Beatty. All Rights Reserved.
  */
@@ -22,8 +22,8 @@ chrome.webRequest.onBeforeRequest.addListener(
 	function(details) {
 		if (details.url.indexOf("://go/") != -1) {
 			var URLparts = details.url.split("go/");
-			console.log("HTTP request contains 'go': " + URLparts[1]);
 			newUrl = goServerUrl + URLparts[1];
+			console.log("Redirecting to go URL: " + newUrl);
 			return {redirectUrl: newUrl};
 		}
   	},
