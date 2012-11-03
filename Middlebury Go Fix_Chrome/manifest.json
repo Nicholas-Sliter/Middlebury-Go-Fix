@@ -1,13 +1,22 @@
 {
-  "name": "Middlebury Go Fix",
+  "name": "Middlebury Go",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "A fix to use the Middlebury 'go/' system from the Chrome omni bar.",
-  "background": { "scripts": ["background.js"] },
-  "page_action": {
-    "default_title": "Middlebury 'go/'"
+  "description": "A fix to use the Middlebury 'go/' system from the Chrome omni bar. Type 'go' plus a search term into the omnibox.",
+  "background": {
+    "scripts": ["background.js", "purl.js"]
   },
+  "omnibox": {
+    "keyword": "go"
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["content.js"]
+  }],
   "permissions": [
-    "tabs"
+    "tabs",
+    "webRequest",
+    "*://*/*",
+    "webRequestBlocking"
   ]
 }
