@@ -1,36 +1,21 @@
-// Called when the url of a tab changes.
-function checkForGoUrl(tabId, changeInfo, tab) {
-	if(changeInfo.status == "loading") {
-	    var url = purl(tab.url);
-    	if (url.attr("host") == "go") {
-    		console.log('Go Link!');
-	    }
-	}
-};
 
-// A test function to print some text
-function printText(text) {
-	console.log(text);
-};
-
-function redirectToURL(redirectURL) {
-	chrome.extension.sendRequest({redirect: redirectURL});
-};
-
-// Add listener for URL
-chrome.tabs.onUpdated.addListener(checkForGoUrl);
-
-// Add listener for omnibox keyword
-chrome.omnibox.onInputEntered.addListener(printText("hello"));
+/*
+ *	File: background.js
+ *	Abstract: Global JavaScript file to capture URL and control redirect.
+ *	Version: 1.0
+ *
+ *	Copyright (C) 2012 Nate Beatty. All Rights Reserved.
+ */
 
 // Redirect support listener
+// Call chrome.extension.sendRequest({redirect: < desiredURL (string) >});
 chrome.extension.onRequest.addListener(function(request, sender) {
 	console.log("Redirecting to " + request.redirect);
     chrome.tabs.update(sender.tab.id, {url: request.redirect});
 });
 
 // Listen to all requests before they are sent
-// Redirect to go service if 
+// Redirect to go service if necessary
 var goServerUrl = "http://go.middlebury.edu/";
 var newUrl;
 chrome.webRequest.onBeforeRequest.addListener(

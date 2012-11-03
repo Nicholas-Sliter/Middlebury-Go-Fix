@@ -4,15 +4,8 @@
   "manifest_version": 2,
   "description": "A fix to use the Middlebury 'go/' system from the Chrome omni bar. Type 'go' plus a search term into the omnibox.",
   "background": {
-    "scripts": ["background.js", "purl.js"]
+    "scripts": ["background.js"]
   },
-  "omnibox": {
-    "keyword": "go"
-  },
-  "content_scripts": [{
-    "matches": ["*://*/*"],
-    "js": ["content.js"]
-  }],
   "permissions": [
     "tabs",
     "webRequest",
