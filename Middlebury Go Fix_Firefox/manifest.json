@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Middlebury Go",
+  "version": "2.0.0",
+  "description": "Allows you to use the Middlebury Go servive off campus without typing go.middlebury.edu/",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "*://*/*",
+    "webRequestBlocking"
+  ]
+}
