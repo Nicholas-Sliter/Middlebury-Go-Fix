@@ -1,5 +1,4 @@
-
-Middlebury Go Fix - Fixed
+# Middlebury Go Web Extension 
 
 ![icon](https://user-images.githubusercontent.com/78503029/186541427-375bdcfe-8280-41c1-90c7-502122d8911f.png)
 
